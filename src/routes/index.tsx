@@ -1,23 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { About } from "@/components/portfolio/About";
+import { Hero } from "@/components/portfolio/Hero";
+import { Loader } from "@/components/portfolio/Loader";
+import { Nav } from "@/components/portfolio/Nav";
+import { SkillWeb } from "@/components/portfolio/SkillWeb";
+import { WebCursor } from "@/components/portfolio/WebCursor";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Krishna Sahu — B.Tech CSE Developer Portfolio" },
+      { name: "description", content: "Portfolio of Krishna Sahu, B.Tech Computer Science & Engineering student, developer and problem solver." },
+      { property: "og:title", content: "Krishna Sahu — Developer Portfolio" },
+      { property: "og:description", content: "CSE student, developer and problem solver. Projects, skills and contact." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative">
+      <Loader />
+      <WebCursor />
+      <Nav />
+      <Hero />
+      <About />
+      <SkillWeb />
+    </main>
   );
 }

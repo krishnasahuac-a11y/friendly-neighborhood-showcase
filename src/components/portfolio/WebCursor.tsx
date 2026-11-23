@@ -39,7 +39,7 @@ export function WebCursor() {
       pts.push({ x: e.clientX, y: e.clientY, t: performance.now() });
       cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
       const hot = (e.target as HTMLElement | null)?.closest("a, button, [role=tab], input, textarea, [data-cursor]");
-      cursor.dataset.hot = hot ? "1" : "0";
+      cursor.dataset["hot"] = hot ? "1" : "0";
     };
     const onLeave = () => (cursor.style.opacity = "0");
     const onEnter = () => (cursor.style.opacity = "1");
