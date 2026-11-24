@@ -69,6 +69,7 @@ export function SkillWeb() {
                 <g
                   key={n.name}
                   data-cursor
+                  data-tour={`skill-${i}`}
                   onMouseEnter={() => setActive(i)}
                   onMouseLeave={() => setActive(null)}
                   onClick={() => setActive(i)}

@@ -111,6 +111,7 @@ export function Projects() {
           {CATEGORIES.map((c) => (
             <button
               key={c}
+              data-tour={`filter-${c}`}
               role="tab"
               aria-selected={filter === c}
               onClick={() => setFilter(c)}

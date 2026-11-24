@@ -33,3 +33,4 @@ use the editor.
 
 - Portfolio content (profile, projects, skills, stats) lives in one data module so real details can be swapped without touching section layouts.
 - The contact form opens the visitor's email app via a mailto link instead of storing messages, because the site has no backend.
+- The guided tour finds page elements through `data-tour` attributes, so keep those attributes when reworking sections the tour visits.

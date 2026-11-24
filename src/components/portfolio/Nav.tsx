@@ -1,6 +1,8 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Play } from "lucide-react";
+import { TOUR_EVENT } from "./Tour";
 import { WebGraphic } from "./WebGraphic";
 import { INTRO_DELAY } from "./Loader";
 
@@ -42,11 +44,29 @@ export function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <TourButton />
+          </li>
         </ul>
-        <a href="#contact" className="font-display text-lg tracking-widest text-primary md:hidden">
-          Contact
-        </a>
+        <div className="flex items-center gap-4 md:hidden">
+          <TourButton />
+          <a href="#contact" className="font-display text-lg tracking-widest text-primary">
+            Contact
+          </a>
+        </div>
       </nav>
     </motion.header>
+  );
+}
+
+function TourButton() {
+  return (
+    <button
+      data-tour="replay"
+      onClick={() => window.dispatchEvent(new Event(TOUR_EVENT))}
+      className="flex items-center gap-1.5 border-2 border-primary px-3 py-0.5 font-display text-lg tracking-widest text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+    >
+      <Play className="size-3.5" /> Tour
+    </button>
   );
 }

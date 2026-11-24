@@ -90,7 +90,7 @@ export function Contact() {
               ))}
             </ul>
 
-            <Button asChild variant="hero" size="xl" className="mt-10">
+            <Button asChild variant="hero" size="xl" className="mt-10" data-tour="resume">
               <a href={PROFILE.resume} download>
                 Download Resume <Download className="size-5" />
               </a>
@@ -99,6 +99,7 @@ export function Contact() {
 
           <motion.form
             noValidate
+            data-tour="contact-form"
             onSubmit={onSubmit}
             initial={{ opacity: 0, y: 40, rotate: 1.5 }}
             whileInView={{ opacity: 1, y: 0, rotate: 0 }}

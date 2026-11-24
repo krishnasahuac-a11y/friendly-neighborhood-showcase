@@ -146,7 +146,7 @@ export function Hero() {
           <WebGraphic className="-mt-1 size-8 text-silver" spokes={8} rings={3} strokeWidth={5} />
           <div className="mt-3 text-center">
             <p className="font-mono text-xs uppercase tracking-[0.4em] text-silver/80 sm:text-sm">Your friendly neighbourhood developer</p>
-            <h1 data-text="KRISHNA SAHU" className="glitch mt-3 font-display text-[18vw] leading-[0.85] text-silver-metal drop-shadow-[0_6px_30px_var(--ink)] sm:text-[13vw] lg:text-[11rem]">
+            <h1 data-tour="name" data-text="KRISHNA SAHU" className="glitch mt-3 font-display text-[18vw] leading-[0.85] text-silver-metal drop-shadow-[0_6px_30px_var(--ink)] sm:text-[13vw] lg:text-[11rem]">
               KRISHNA SAHU
             </h1>
           </div>
@@ -162,7 +162,7 @@ export function Hero() {
             {PROFILE.roles.join("  |  ")}
           </p>
 
-          <div className="relative">
+          <div className="relative" data-tour="swing">
             <Button variant="hero" size="xl" onClick={swing}>
               Swing Into My Work <ArrowDown className="size-5" />
             </Button>

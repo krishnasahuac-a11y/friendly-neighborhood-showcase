@@ -6,6 +6,7 @@ import { Loader } from "@/components/portfolio/Loader";
 import { Nav } from "@/components/portfolio/Nav";
 import { Projects } from "@/components/portfolio/Projects";
 import { SkillWeb } from "@/components/portfolio/SkillWeb";
+import { Tour } from "@/components/portfolio/Tour";
 import { WebCursor } from "@/components/portfolio/WebCursor";
 
 export const Route = createFileRoute("/")({
@@ -37,6 +38,7 @@ function Index() {
       <SkillWeb />
       <Projects />
       <Contact />
+      <Tour />
     </main>
   );
 }

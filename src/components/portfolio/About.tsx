@@ -19,6 +19,7 @@ export function About() {
             whileInView={{ opacity: 1, rotate: -3, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ type: "spring", stiffness: 70, damping: 14 }}
+            data-tour="about"
             className="relative mx-auto w-full max-w-md"
           >
             <div className="comic-panel relative overflow-hidden bg-card">
@@ -70,7 +71,7 @@ export function About() {
               ))}
             </ol>
 
-            <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div data-tour="stats" className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {STATS.map((s, i) => (
                 <motion.div
                   key={s.label}
