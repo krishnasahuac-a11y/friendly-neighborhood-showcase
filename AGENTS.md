@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Portfolio content (profile, projects, skills, stats) lives in one data module so real details can be swapped without touching section layouts.
+- The contact form opens the visitor's email app via a mailto link instead of storing messages, because the site has no backend.
